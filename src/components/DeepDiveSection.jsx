@@ -6,9 +6,9 @@ export default function DeepDiveSection() {
     {
       icon: Filter,
       to: '/pure-functions',
-      borderHover: 'hover:border-purple-500/50',
-      iconBg: 'rgba(168,85,247,0.1)',
-      iconColor: '#a78bfa',
+      borderHover: 'hover:border-neutral-500/50',
+      iconBg: 'rgba(163,163,163,0.15)',
+      iconColor: '#d4d4d4',
       title: 'Pure Functions',
       desc: 'Same input in, same output out. No API calls, no Date.now(), no mess. Reducers stay pure.',
       snippet: (
@@ -21,9 +21,9 @@ export default function DeepDiveSection() {
     {
       icon: Copy,
       to: '/immutability',
-      borderHover: 'hover:border-cyan-500/50',
-      iconBg: 'rgba(34,211,238,0.1)',
-      iconColor: '#22d3ee',
+      borderHover: 'hover:border-neutral-500/50',
+      iconBg: 'rgba(163,163,163,0.15)',
+      iconColor: '#d4d4d4',
       title: 'Immutability',
       desc: 'Don’t touch the original. Copy it, change the copy, return that. Makes “did anything change?” a simple ref check.',
       snippet: (
@@ -36,16 +36,16 @@ export default function DeepDiveSection() {
     {
       icon: Layers,
       to: '/single-source-of-truth',
-      borderHover: 'hover:border-pink-500/50',
-      iconBg: 'rgba(236,72,153,0.1)',
-      iconColor: '#f472b6',
+      borderHover: 'hover:border-neutral-500/50',
+      iconBg: 'rgba(163,163,163,0.15)',
+      iconColor: '#d4d4d4',
       title: 'Single Source of Truth',
       desc: 'All your app state lives in one tree, in one store. One place to look when things get weird.',
       snippet: (
         <div className="flex items-center justify-center gap-2 h-16">
-          <span className="w-2 h-2 bg-pink-500 rounded-full" />
-          <span className="w-2 h-2 bg-purple-500 rounded-full" />
-          <span className="w-2 h-2 bg-blue-500 rounded-full" />
+          <span className="w-2 h-2 bg-neutral-500 rounded-full" />
+          <span className="w-2 h-2 bg-neutral-500 rounded-full" />
+          <span className="w-2 h-2 bg-neutral-500 rounded-full" />
           <span className="ml-2">One Object Tree</span>
         </div>
       ),
@@ -53,7 +53,7 @@ export default function DeepDiveSection() {
   ]
 
   return (
-    <section id="deep-dive" className="py-24 bg-slate-950 border-t border-slate-800">
+    <section id="deep-dive" className="py-24 bg-neutral-950 border-t border-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-3 gap-8">
           {cards.map(({ icon: Icon, to, borderHover, iconBg, iconColor, title, desc, snippet }) => (

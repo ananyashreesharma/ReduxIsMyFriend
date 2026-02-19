@@ -20,17 +20,17 @@ export default function Nav() {
   ]
 
   return (
-    <nav className="fixed top-0 w-full z-50 glass border-b border-slate-700/50">
+    <nav className="fixed top-0 w-full z-50 glass border-b border-neutral-800">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex items-center justify-between h-16">
           <Link
             to="/"
             onClick={() => setMobileOpen(false)}
-            className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded-lg"
+            className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 rounded-lg"
             aria-label="ReduxFlow home"
           >
             <span className="font-bold text-xl tracking-tight">
-              Redux<span className="text-cyan-400">Flow</span>
+              Redux<span className="text-neutral-300">Flow</span>
             </span>
           </Link>
 
@@ -40,7 +40,7 @@ export default function Nav() {
                 <button
                   key={id}
                   onClick={scrollTo(id)}
-                  className="text-sm font-medium text-slate-300 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded"
+                  className="text-sm font-medium text-neutral-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 rounded"
                 >
                   {label}
                 </button>
@@ -48,7 +48,7 @@ export default function Nav() {
                 <Link
                   key={id}
                   to={`/#${id}`}
-                  className="text-sm font-medium text-slate-300 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/50 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900 rounded"
+                  className="text-sm font-medium text-neutral-400 hover:text-white transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 rounded"
                 >
                   {label}
                 </Link>
@@ -57,14 +57,14 @@ export default function Nav() {
             {isHome ? (
               <button
                 onClick={scrollTo('solution')}
-                className="bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-lg text-sm font-medium border border-cyan-500/50 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                className="bg-neutral-800 hover:bg-neutral-700 text-neutral-200 px-4 py-2 rounded-lg text-sm font-medium border border-neutral-600 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900"
               >
                 start learning
               </button>
             ) : (
               <Link
                 to="/#solution"
-                className="bg-cyan-500/10 hover:bg-cyan-500/20 text-cyan-400 px-4 py-2 rounded-lg text-sm font-medium border border-cyan-500/50 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400 focus-visible:ring-offset-2 focus-visible:ring-offset-slate-900"
+                className="bg-neutral-800 hover:bg-neutral-700 text-neutral-200 px-4 py-2 rounded-lg text-sm font-medium border border-neutral-600 transition-all focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900"
               >
                 start learning
               </Link>
@@ -73,7 +73,7 @@ export default function Nav() {
 
           <button
             type="button"
-            className="md:hidden p-2 rounded-lg text-slate-400 hover:text-white hover:bg-slate-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-cyan-400/50 rounded"
+            className="md:hidden p-2 rounded-lg text-neutral-400 hover:text-white hover:bg-neutral-800 transition-colors focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 rounded"
             onClick={() => setMobileOpen((o) => !o)}
             aria-expanded={mobileOpen}
             aria-label="Toggle menu"
@@ -84,14 +84,14 @@ export default function Nav() {
 
         {/* Mobile menu */}
         {mobileOpen && (
-          <div className="md:hidden py-4 border-t border-slate-700/50 animate-[fadeIn_0.2s_ease-out]">
+          <div className="md:hidden py-4 border-t border-neutral-800 animate-[fadeIn_0.2s_ease-out]">
             <div className="flex flex-col gap-1">
               {links.map(({ id, label }) =>
                 isHome ? (
                   <button
                     key={id}
                     onClick={scrollTo(id)}
-                    className="text-left px-4 py-3 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+                    className="text-left px-4 py-3 text-sm font-medium text-neutral-400 hover:text-white hover:bg-neutral-800/50 rounded-lg transition-colors"
                   >
                     {label}
                   </button>
@@ -100,7 +100,7 @@ export default function Nav() {
                     key={id}
                     to={`/#${id}`}
                     onClick={() => setMobileOpen(false)}
-                    className="px-4 py-3 text-sm font-medium text-slate-300 hover:text-white hover:bg-slate-800/50 rounded-lg transition-colors"
+                    className="px-4 py-3 text-sm font-medium text-neutral-400 hover:text-white hover:bg-neutral-800/50 rounded-lg transition-colors"
                   >
                     {label}
                   </Link>
@@ -109,7 +109,7 @@ export default function Nav() {
               <Link
                 to="/#solution"
                 onClick={() => setMobileOpen(false)}
-                className="mx-4 mt-2 py-3 bg-cyan-500/10 text-cyan-400 rounded-lg text-sm font-medium border border-cyan-500/50 text-center"
+                className="mx-4 mt-2 py-3 bg-neutral-800 text-neutral-200 rounded-lg text-sm font-medium border border-neutral-600 text-center"
               >
                 start learning
               </Link>

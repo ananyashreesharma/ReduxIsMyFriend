@@ -68,7 +68,7 @@ export default function SolutionSection() {
           ? 'border-yellow-500'
           : detail === 'store'
             ? 'border-purple-500'
-            : 'border-cyan-500'
+            : 'border-neutral-500'
   const titleColorClass =
     detail === 'ui'
       ? 'text-pink-400'
@@ -81,12 +81,12 @@ export default function SolutionSection() {
             : 'text-white'
 
   return (
-    <section id="solution" className="py-24 bg-slate-900 relative">
+    <section id="solution" className="py-24 bg-neutral-900 relative">
       <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="text-center mb-16">
-          <span className="text-emerald-400 font-mono text-sm tracking-wider uppercase">the fix</span>
+          <span className="text-neutral-400 font-mono text-sm tracking-wider uppercase">the fix</span>
           <h2 className="text-3xl md:text-5xl font-bold mt-2 mb-6">one direction. one source. that’s it.</h2>
-          <p className="text-slate-400 max-w-2xl mx-auto text-lg">
+          <p className="text-neutral-400 max-w-2xl mx-auto text-lg">
             Redux puts everything in one store and makes data flow one way. So you’re not guessing where stuff came from anymore.
           </p>
         </div>
@@ -99,47 +99,47 @@ export default function SolutionSection() {
               <div className="absolute inset-0 flex items-center justify-center">
                 <div className="text-center">
                   <h3 className="text-2xl font-bold text-white tracking-widest">the loop</h3>
-                  <p className="text-slate-500 text-xs font-mono">one way only</p>
+                  <p className="text-neutral-500 text-xs font-mono">one way only</p>
                 </div>
               </div>
 
               <div className="absolute top-0 left-1/2 -translate-x-1/2 -translate-y-4 w-32 group cursor-pointer" onClick={() => setDetail('ui')}>
-                <div className="w-24 h-24 mx-auto bg-slate-800 rounded-2xl border-2 border-pink-500 flex items-center justify-center shadow-[0_0_30px_rgba(236,72,153,0.3)] transition-all group-hover:scale-110 z-20 relative">
+                <div className="w-24 h-24 mx-auto bg-neutral-800 rounded-2xl border-2 border-pink-500 flex items-center justify-center shadow-[0_0_30px_rgba(236,72,153,0.3)] transition-all group-hover:scale-110 z-20 relative">
                   <Layout className="w-10 h-10 text-pink-400" />
                 </div>
                 <div className="text-center mt-4">
                   <h4 className="font-bold text-pink-400">View (UI)</h4>
-                  <p className="text-xs text-slate-400">where the clicks happen</p>
+                  <p className="text-xs text-neutral-400">where the clicks happen</p>
                 </div>
               </div>
 
               <div className="absolute top-1/2 right-0 translate-x-4 -translate-y-1/2 w-32 group cursor-pointer" onClick={() => setDetail('action')}>
-                <div className="w-24 h-24 mx-auto bg-slate-800 rounded-full border-2 border-cyan-500 flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all group-hover:scale-110 z-20 relative">
+                <div className="w-24 h-24 mx-auto bg-neutral-800 rounded-full border-2 border-cyan-500 flex items-center justify-center shadow-[0_0_30px_rgba(34,211,238,0.3)] transition-all group-hover:scale-110 z-20 relative">
                   <Send className="w-10 h-10 text-cyan-400 ml-1" />
                 </div>
                 <div className="text-center mt-4">
                   <h4 className="font-bold text-cyan-400">Action</h4>
-                  <p className="text-xs text-slate-400">says what happened</p>
+                  <p className="text-xs text-neutral-400">says what happened</p>
                 </div>
               </div>
 
               <div className="absolute bottom-0 left-1/2 -translate-x-1/2 translate-y-4 w-32 group cursor-pointer" onClick={() => setDetail('reducer')}>
-                <div className="w-24 h-24 mx-auto bg-slate-800 rounded-lg transform rotate-45 border-2 border-yellow-500 flex items-center justify-center shadow-[0_0_30px_rgba(234,179,8,0.3)] transition-all group-hover:scale-110 z-20 relative">
+                <div className="w-24 h-24 mx-auto bg-neutral-800 rounded-lg transform rotate-45 border-2 border-yellow-500 flex items-center justify-center shadow-[0_0_30px_rgba(234,179,8,0.3)] transition-all group-hover:scale-110 z-20 relative">
                   <GitMerge className="w-10 h-10 text-yellow-400 -rotate-45" />
                 </div>
                 <div className="text-center mt-8">
                   <h4 className="font-bold text-yellow-400">Reducer</h4>
-                  <p className="text-xs text-slate-400">figures out the new state</p>
+                  <p className="text-xs text-neutral-400">figures out the new state</p>
                 </div>
               </div>
 
               <div className="absolute top-1/2 left-0 -translate-x-4 -translate-y-1/2 w-32 group cursor-pointer" onClick={() => setDetail('store')}>
-                <div className="w-24 h-24 mx-auto bg-slate-800 rounded-2xl border-2 border-purple-500 flex items-center justify-center shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all group-hover:scale-110 z-20 relative">
+                <div className="w-24 h-24 mx-auto bg-neutral-800 rounded-2xl border-2 border-purple-500 flex items-center justify-center shadow-[0_0_30px_rgba(168,85,247,0.3)] transition-all group-hover:scale-110 z-20 relative">
                   <Database className="w-10 h-10 text-purple-400" />
                 </div>
                 <div className="text-center mt-4">
                   <h4 className="font-bold text-purple-400">Store</h4>
-                  <p className="text-xs text-slate-400">holds the whole tree</p>
+                  <p className="text-xs text-neutral-400">holds the whole tree</p>
                 </div>
               </div>
 
@@ -171,11 +171,11 @@ export default function SolutionSection() {
 
           <div className={`glass-card rounded-2xl p-6 flex flex-col h-full border-t-4 ${panelBorderClass}`} id="detail-panel">
             <div className="mb-4">
-              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-cyan-900/30 text-cyan-400 text-xs font-bold mb-4">play with it</div>
+              <div className="inline-flex items-center gap-2 px-3 py-1 rounded-full bg-neutral-800 text-neutral-300 text-xs font-bold mb-4">play with it</div>
               <h3 className={`text-2xl font-bold mb-2 ${titleColorClass}`} id="detail-title">
                 {detail ? DETAILS[detail].title : 'pick a node'}
               </h3>
-              <p className="text-slate-400 text-sm leading-relaxed" id="detail-desc">
+              <p className="text-neutral-400 text-sm leading-relaxed" id="detail-desc">
                 {detail ? DETAILS[detail].desc : 'Click something in the diagram or use the buttons. You’ll see the code for each part.'}
               </p>
             </div>
@@ -196,7 +196,7 @@ export default function SolutionSection() {
                           : key === 'reducer'
                             ? 'bg-yellow-500/20 text-yellow-400 border border-yellow-500/50'
                             : 'bg-purple-500/20 text-purple-400 border border-purple-500/50'
-                      : 'bg-slate-800/80 text-slate-400 border border-slate-700 hover:border-slate-600 hover:text-slate-300'
+                      : 'bg-neutral-800/80 text-neutral-400 border border-neutral-700 hover:border-neutral-600 hover:text-neutral-300'
                   }`}
                 >
                   {DETAILS[key].title.replace('The ', '').replace(' (UI)', '')}
@@ -204,30 +204,30 @@ export default function SolutionSection() {
               ))}
             </div>
 
-            <div className="flex-1 min-h-[200px] bg-slate-950 rounded-xl p-4 font-mono text-sm overflow-auto border border-slate-800 relative group">
-              <div className="absolute top-2 right-2 text-xs text-slate-600 group-hover:text-slate-400 transition-colors">code preview</div>
+            <div className="flex-1 min-h-[200px] bg-neutral-950 rounded-xl p-4 font-mono text-sm overflow-auto border border-neutral-800 relative group">
+              <div className="absolute top-2 right-2 text-xs text-neutral-600 group-hover:text-neutral-400 transition-colors">code preview</div>
               {detail ? (
-                <pre id="detail-code" className="text-slate-300 pt-6" dangerouslySetInnerHTML={{ __html: DETAILS[detail].code }} />
+                <pre id="detail-code" className="text-neutral-300 pt-6" dangerouslySetInnerHTML={{ __html: DETAILS[detail].code }} />
               ) : (
-                <pre className="text-slate-500 pt-6">
+                <pre className="text-neutral-500 pt-6">
                   <span className="token-comment">// click a node or hit the buttons above</span>
                   <br />
                   <span className="token-comment">// flow: View → Action → Reducer → Store → View</span>
                   <br />
                   <br />
-                  <span className="text-slate-600">View</span>     <span className="text-slate-500"> user does a thing, we dispatch</span>
+                  <span className="text-neutral-400">View</span>     <span className="text-neutral-500"> user does a thing, we dispatch</span>
                   <br />
-                  <span className="text-slate-600">Action</span>    <span className="text-slate-500"> just {`{ type, payload }`}</span>
+                  <span className="text-neutral-400">Action</span>    <span className="text-neutral-500"> just {`{ type, payload }`}</span>
                   <br />
-                  <span className="text-slate-600">Reducer</span>   <span className="text-slate-500"> (state, action) =&gt; newState</span>
+                  <span className="text-neutral-400">Reducer</span>   <span className="text-neutral-500"> (state, action) =&gt; newState</span>
                   <br />
-                  <span className="text-slate-600">Store</span>    <span className="text-slate-500"> the one place that has it all</span>
+                  <span className="text-neutral-400">Store</span>    <span className="text-neutral-500"> the one place that has it all</span>
                 </pre>
               )}
             </div>
 
-            <div className="mt-6 pt-6 border-t border-slate-700/50">
-              <div className="flex justify-between items-center text-xs text-slate-500">
+            <div className="mt-6 pt-6 border-t border-neutral-700/50">
+              <div className="flex justify-between items-center text-xs text-neutral-500">
                 <span>{detail ? `${DETAILS[detail].title}` : 'choose one to see code'}</span>
                 <span className="flex items-center gap-1">
                   <span className="w-2 h-2 rounded-full bg-green-500 animate-pulse" /> live
