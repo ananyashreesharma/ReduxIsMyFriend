@@ -15,8 +15,8 @@ export default function Hero() {
         </div>
 
         <h1 className="text-5xl md:text-7xl font-extrabold tracking-tight mb-8">
-          Redux, but like <br />
-          <span className="gradient-text">you actually get it this time</span>
+          making Redux <br />
+          <span className="gradient-text">my close friend</span>
         </h1>
 
         <p className="text-xl text-slate-400 max-w-2xl mx-auto mb-12 leading-relaxed">
