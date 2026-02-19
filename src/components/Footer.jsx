@@ -1,3 +1,5 @@
+import { Heart } from 'lucide-react'
+
 export default function Footer() {
   const scrollTop = () => window.scrollTo({ top: 0, behavior: 'smooth' })
 
@@ -20,6 +22,10 @@ export default function Footer() {
             back to top
           </button>
         </div>
+        <p className="mt-10 text-slate-600 text-sm flex items-center justify-center gap-1.5">
+          efforts by anannyashree
+          <Heart className="w-4 h-4 text-pink-500/80 fill-pink-500/30" aria-hidden />
+        </p>
       </div>
     </footer>
   )
