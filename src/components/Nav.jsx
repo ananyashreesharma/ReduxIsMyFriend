@@ -27,10 +27,10 @@ export default function Nav() {
             to="/"
             onClick={() => setMobileOpen(false)}
             className="flex items-center gap-2 focus:outline-none focus-visible:ring-2 focus-visible:ring-white/40 focus-visible:ring-offset-2 focus-visible:ring-offset-neutral-900 rounded-lg"
-            aria-label="ReduxFlow home"
+            aria-label="ReduxIsMyFriend home"
           >
-            <span className="font-bold text-xl tracking-tight">
-              Redux<span className="text-neutral-300">Flow</span>
+            <span className="font-bold text-xl tracking-tight text-white">
+            ReduxIsMyFriend
             </span>
           </Link>
 
